@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'Mall_Example' do
+  pod 'Mall', :path => '../'
+
+  target 'Mall_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

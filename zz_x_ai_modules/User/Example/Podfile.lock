@@ -1,0 +1,16 @@
+PODS:
+  - User (0.1.0)
+
+DEPENDENCIES:
+  - User (from `../`)
+
+EXTERNAL SOURCES:
+  User:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  User: 763e7d47e6a991d0a9663e66a670d69691d0ba5c
+
+PODFILE CHECKSUM: c87d18593c78031daa715a3c9d16befc1cf3d2a2
+
+COCOAPODS: 1.16.2

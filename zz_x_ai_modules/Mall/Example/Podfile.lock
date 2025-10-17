@@ -1,0 +1,16 @@
+PODS:
+  - Mall (0.1.0)
+
+DEPENDENCIES:
+  - Mall (from `../`)
+
+EXTERNAL SOURCES:
+  Mall:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Mall: 30934ad54118a606c7c4d10152d0712818b50239
+
+PODFILE CHECKSUM: 5aaba2548ed442fba1526c4c36847ce0abe3b012
+
+COCOAPODS: 1.16.2
