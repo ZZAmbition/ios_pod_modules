@@ -1,0 +1,16 @@
+PODS:
+  - DataService (0.1.0)
+
+DEPENDENCIES:
+  - DataService (from `../`)
+
+EXTERNAL SOURCES:
+  DataService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DataService: b0e88763abc3be58700d623d5d25253c625729fd
+
+PODFILE CHECKSUM: eec8b546ac9204400ff51182aaae10edd98242be
+
+COCOAPODS: 1.16.2
