@@ -6,15 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		90C13FD9DEC9C16588CF0D31 /* Pods_ZZXAIApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229B7075DE1BCBB5104D5A24 /* Pods_ZZXAIApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		229B7075DE1BCBB5104D5A24 /* Pods_ZZXAIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZXAIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1030962EA1F6CF003531C3 /* ZZXAIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZXAIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4631D3A788C5CFE47F87EA3 /* Pods-ZZXAIApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZXAIApp.debug.xcconfig"; path = "Target Support Files/Pods-ZZXAIApp/Pods-ZZXAIApp.debug.xcconfig"; sourceTree = "<group>"; };
+		ED70B40C47A09161C32EAABB /* Pods-ZZXAIApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZXAIApp.release.xcconfig"; path = "Target Support Files/Pods-ZZXAIApp/Pods-ZZXAIApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3A1030AD2EA1F6D0003531C3 /* Exceptions for "ZZXAIApp" folder in "ZZXAIApp" target */ = {
+		3AC33F3D2EA71C9C003B5BD1 /* Exceptions for "ZZXAIApp" folder in "ZZXAIApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Src/Info.plist,
 			);
 			target = 3A1030952EA1F6CF003531C3 /* ZZXAIApp */;
 		};
@@ -24,7 +31,7 @@
 		3A1030982EA1F6CF003531C3 /* ZZXAIApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				3A1030AD2EA1F6D0003531C3 /* Exceptions for "ZZXAIApp" folder in "ZZXAIApp" target */,
+				3AC33F3D2EA71C9C003B5BD1 /* Exceptions for "ZZXAIApp" folder in "ZZXAIApp" target */,
 			);
 			path = ZZXAIApp;
 			sourceTree = "<group>";
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C13FD9DEC9C16588CF0D31 /* Pods_ZZXAIApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				3A1030982EA1F6CF003531C3 /* ZZXAIApp */,
 				3A1030972EA1F6CF003531C3 /* Products */,
+				614D6DD096CA4E80D2550492 /* Pods */,
+				EDE74BE9305508CF33847FBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		614D6DD096CA4E80D2550492 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4631D3A788C5CFE47F87EA3 /* Pods-ZZXAIApp.debug.xcconfig */,
+				ED70B40C47A09161C32EAABB /* Pods-ZZXAIApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EDE74BE9305508CF33847FBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				229B7075DE1BCBB5104D5A24 /* Pods_ZZXAIApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A1030AE2EA1F6D0003531C3 /* Build configuration list for PBXNativeTarget "ZZXAIApp" */;
 			buildPhases = (
+				510C770294D8EFCA9033E440 /* [CP] Check Pods Manifest.lock */,
 				3A1030922EA1F6CF003531C3 /* Sources */,
 				3A1030932EA1F6CF003531C3 /* Frameworks */,
 				3A1030942EA1F6CF003531C3 /* Resources */,
+				570F6908B585B2B1BDF0F408 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				3A1030982EA1F6CF003531C3 /* ZZXAIApp */,
 			);
 			name = ZZXAIApp;
-			packageProductDependencies = (
-			);
 			productName = ZZXAIApp;
 			productReference = 3A1030962EA1F6CF003531C3 /* ZZXAIApp.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +153,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		510C770294D8EFCA9033E440 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZZXAIApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		570F6908B585B2B1BDF0F408 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZZXAIApp/Pods-ZZXAIApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZZXAIApp/Pods-ZZXAIApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZZXAIApp/Pods-ZZXAIApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A1030922EA1F6CF003531C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,18 +208,20 @@
 /* Begin XCBuildConfiguration section */
 		3A1030AF2EA1F6D0003531C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4631D3A788C5CFE47F87EA3 /* Pods-ZZXAIApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZZXAIApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ZZXAIApp/Src/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -166,18 +237,20 @@
 		};
 		3A1030B02EA1F6D0003531C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED70B40C47A09161C32EAABB /* Pods-ZZXAIApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZZXAIApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ZZXAIApp/Src/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

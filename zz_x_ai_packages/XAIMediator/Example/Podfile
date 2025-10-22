@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'XAIMediator_Example' do
+  pod 'XAIMediator', :path => '../'
+
+  target 'XAIMediator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '13.0'
+
+target 'ZZXAIApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ZZXAIApp
+  
+  pod 'Home', :path => '../../zz_x_ai_modules/Home/'   # 首页
+  pod 'Mall', :path => '../../zz_x_ai_modules/Mall/'   # 商城
+  pod 'Community', :path => '../../zz_x_ai_modules/Community/'   # 社区
+  pod 'User', :path => '../../zz_x_ai_modules/User/'   # 我的
+  pod 'Login', :path => '../../zz_x_ai_modules/Login/'   # 登录
+
+  
+  
+  # podspec local path 由于podspec文件不支持本地路径引用，所以需要在使用的podfile中增加本地路径
+  # 在子模块的podspec中只需要s.dependency 'XAIPackagesLibs'就会使用target中的路径
+  
+  pod 'XAIPackagesLibs', :path => '../../zz_x_ai_packages/'
+  pod 'XAIModulesLibs', :path => '../../zz_x_ai_modules/'
+end

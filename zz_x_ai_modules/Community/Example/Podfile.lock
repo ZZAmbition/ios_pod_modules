@@ -1,0 +1,16 @@
+PODS:
+  - Community (0.1.0)
+
+DEPENDENCIES:
+  - Community (from `../`)
+
+EXTERNAL SOURCES:
+  Community:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Community: 55dd1ebad39f85cf70756f6f152bac402b20df01
+
+PODFILE CHECKSUM: e91c5a9533eee73ee7e286f29be053e3bff46203
+
+COCOAPODS: 1.16.2

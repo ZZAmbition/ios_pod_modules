@@ -1,0 +1,76 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Community (0.1.0):
+    - XAIModulesLibs
+  - Home (0.1.0):
+    - XAIModulesLibs
+  - Login (0.1.0):
+    - XAIModulesLibs
+  - Mall (0.1.0):
+    - XAIModulesLibs
+  - Masonry (1.1.0)
+  - User (0.1.0):
+    - XAIModulesLibs
+  - XAIModulesLibs (0.1.0):
+    - Masonry
+  - XAIPackagesLibs (0.1.0):
+    - AFNetworking
+
+DEPENDENCIES:
+  - Community (from `../../zz_x_ai_modules/Community/`)
+  - Home (from `../../zz_x_ai_modules/Home/`)
+  - Login (from `../../zz_x_ai_modules/Login/`)
+  - Mall (from `../../zz_x_ai_modules/Mall/`)
+  - User (from `../../zz_x_ai_modules/User/`)
+  - XAIModulesLibs (from `../../zz_x_ai_modules/`)
+  - XAIPackagesLibs (from `../../zz_x_ai_packages/`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Masonry
+
+EXTERNAL SOURCES:
+  Community:
+    :path: "../../zz_x_ai_modules/Community/"
+  Home:
+    :path: "../../zz_x_ai_modules/Home/"
+  Login:
+    :path: "../../zz_x_ai_modules/Login/"
+  Mall:
+    :path: "../../zz_x_ai_modules/Mall/"
+  User:
+    :path: "../../zz_x_ai_modules/User/"
+  XAIModulesLibs:
+    :path: "../../zz_x_ai_modules/"
+  XAIPackagesLibs:
+    :path: "../../zz_x_ai_packages/"
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  Community: 672f96b27f74763f51ee5e85baaadd96ef52ee0b
+  Home: bbf90acd8452ed83f750dfa759c16f85058280c3
+  Login: b90e299b7b1aea4e8cbdf1dcebf473681c36d29c
+  Mall: db5f1d2ab0299fe2d7fe2311ddca6d5006747c70
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  User: 3d4fb830f15aff90a1e92eada93ef0ab163357f0
+  XAIModulesLibs: da9f9d29cbfa9fb58ebec27fb875bd2de91e193e
+  XAIPackagesLibs: 44aa16b488383755db2808d685e2e9d2821342f8
+
+PODFILE CHECKSUM: ec57c5cf63918966e4f63af3da2c0c80d011015c
+
+COCOAPODS: 1.16.2

@@ -1,0 +1,16 @@
+PODS:
+  - XAIMediator (0.1.0)
+
+DEPENDENCIES:
+  - XAIMediator (from `../`)
+
+EXTERNAL SOURCES:
+  XAIMediator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XAIMediator: 49e203bdb5d72a7946af407c03967d95c6ac722c
+
+PODFILE CHECKSUM: 6201594e9e0ccbcef18ad72f184a13fdd0be2a8e
+
+COCOAPODS: 1.16.2
