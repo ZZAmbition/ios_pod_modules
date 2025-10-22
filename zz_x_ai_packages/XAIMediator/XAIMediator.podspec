@@ -30,13 +30,15 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'XAIMediator/Classes/**/*'
+  s.source_files = ['XAIMediator/**/*.{h,m}',
+                    'XAIMediator/**/**/*.{h,m}',
+                    'XAIMediator/**/**/**/*.{h,m}']
   
   # s.resource_bundles = {
   #   'XAIMediator' => ['XAIMediator/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'XAIMediator/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

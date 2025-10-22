@@ -11,4 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/youzan/Bifrost.git", :tag => s.version.to_s }
   s.source_files = ['Bifrost/**/*','Bifrost/*','Bifrost/**/**/*']
   s.ios.deployment_target = "10.0"
+  s.public_header_files = 'Bifrost/*.h'
+  
+  
 end

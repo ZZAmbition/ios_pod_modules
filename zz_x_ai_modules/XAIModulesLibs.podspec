@@ -13,4 +13,6 @@ Pod::Spec.new do |s|
 
 
   s.dependency 'Masonry'
+  s.dependency 'XAIMediator'
+  s.dependency 'Bifrost'
 end

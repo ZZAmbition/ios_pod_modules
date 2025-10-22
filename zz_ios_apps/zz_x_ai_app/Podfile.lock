@@ -14,8 +14,11 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - Bifrost (1.0.0)
   - Community (0.1.0):
     - XAIModulesLibs
+  - DataService (0.1.0):
+    - XAIPackagesLibs
   - Home (0.1.0):
     - XAIModulesLibs
   - Login (0.1.0):
@@ -25,17 +28,23 @@ PODS:
   - Masonry (1.1.0)
   - User (0.1.0):
     - XAIModulesLibs
+  - XAIMediator (0.1.0)
   - XAIModulesLibs (0.1.0):
+    - Bifrost
     - Masonry
+    - XAIMediator
   - XAIPackagesLibs (0.1.0):
     - AFNetworking
 
 DEPENDENCIES:
+  - Bifrost (from `../../zz_ios_packages/Bifrost/`)
   - Community (from `../../zz_x_ai_modules/Community/`)
+  - DataService (from `../../zz_x_ai_packages/DataService/`)
   - Home (from `../../zz_x_ai_modules/Home/`)
   - Login (from `../../zz_x_ai_modules/Login/`)
   - Mall (from `../../zz_x_ai_modules/Mall/`)
   - User (from `../../zz_x_ai_modules/User/`)
+  - XAIMediator (from `../../zz_x_ai_packages/XAIMediator/`)
   - XAIModulesLibs (from `../../zz_x_ai_modules/`)
   - XAIPackagesLibs (from `../../zz_x_ai_packages/`)
 
@@ -45,8 +54,12 @@ SPEC REPOS:
     - Masonry
 
 EXTERNAL SOURCES:
+  Bifrost:
+    :path: "../../zz_ios_packages/Bifrost/"
   Community:
     :path: "../../zz_x_ai_modules/Community/"
+  DataService:
+    :path: "../../zz_x_ai_packages/DataService/"
   Home:
     :path: "../../zz_x_ai_modules/Home/"
   Login:
@@ -55,6 +68,8 @@ EXTERNAL SOURCES:
     :path: "../../zz_x_ai_modules/Mall/"
   User:
     :path: "../../zz_x_ai_modules/User/"
+  XAIMediator:
+    :path: "../../zz_x_ai_packages/XAIMediator/"
   XAIModulesLibs:
     :path: "../../zz_x_ai_modules/"
   XAIPackagesLibs:
@@ -62,15 +77,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  Bifrost: 834d65c8f32233594123a6bffce4077619ccf954
   Community: 672f96b27f74763f51ee5e85baaadd96ef52ee0b
+  DataService: 6c63aeae6e0894e38c58776d753e5798817c76ce
   Home: bbf90acd8452ed83f750dfa759c16f85058280c3
   Login: b90e299b7b1aea4e8cbdf1dcebf473681c36d29c
   Mall: db5f1d2ab0299fe2d7fe2311ddca6d5006747c70
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   User: 3d4fb830f15aff90a1e92eada93ef0ab163357f0
-  XAIModulesLibs: da9f9d29cbfa9fb58ebec27fb875bd2de91e193e
+  XAIMediator: 9668249331629d8462219700b0196e4f96280b75
+  XAIModulesLibs: b18450e448db1b08e715edf3fb39fb043c0c1b29
   XAIPackagesLibs: 44aa16b488383755db2808d685e2e9d2821342f8
 
-PODFILE CHECKSUM: ec57c5cf63918966e4f63af3da2c0c80d011015c
+PODFILE CHECKSUM: 7b26020a9eeebfc241bf09ad9c4334753121401a
 
 COCOAPODS: 1.16.2

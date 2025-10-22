@@ -1,16 +1,29 @@
 PODS:
-  - User (0.1.0)
+  - Masonry (1.1.0)
+  - User (0.1.0):
+    - XAIModulesLibs
+  - XAIModulesLibs (0.1.0):
+    - Masonry
 
 DEPENDENCIES:
   - User (from `../`)
+  - XAIModulesLibs (from `../../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
 
 EXTERNAL SOURCES:
   User:
     :path: "../"
+  XAIModulesLibs:
+    :path: "../../"
 
 SPEC CHECKSUMS:
-  User: 763e7d47e6a991d0a9663e66a670d69691d0ba5c
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  User: 3d4fb830f15aff90a1e92eada93ef0ab163357f0
+  XAIModulesLibs: da9f9d29cbfa9fb58ebec27fb875bd2de91e193e
 
-PODFILE CHECKSUM: c87d18593c78031daa715a3c9d16befc1cf3d2a2
+PODFILE CHECKSUM: 2d9293283f085d2632492cc18ea73b96602853b2
 
 COCOAPODS: 1.16.2

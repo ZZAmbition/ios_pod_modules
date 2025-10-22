@@ -6,7 +6,7 @@
 //
 
 #import "XAITableViewController.h"
-#import <XAI>
+
 
 @interface XAITableViewController ()
 
