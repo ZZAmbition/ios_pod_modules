@@ -6,10 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <XAIMediator/XAIMediator.h>
+#import <Bifrost/BifrostHeader.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeModule : NSObject
+@interface HomeModule : NSObject<XAIHomeModuleFacadeProtocol,BifrostModuleProtocol>
+
+
 
 @end
 

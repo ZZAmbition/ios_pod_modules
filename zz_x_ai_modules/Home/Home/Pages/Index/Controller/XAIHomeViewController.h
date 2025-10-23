@@ -6,10 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XAIHomeViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XAIHomeViewController : UIViewController
+
+- (instancetype)initWithViewModel;
+- (instancetype)initWithViewModel:(XAIHomeViewModel *)viewModel;
+
 
 @end
 

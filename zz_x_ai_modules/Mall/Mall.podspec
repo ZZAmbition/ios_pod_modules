@@ -38,7 +38,7 @@ TODO: Add long description of the pod here.
   #   'Mall' => ['Mall/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Mall/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'XAIModulesLibs'
 end

@@ -38,7 +38,7 @@ TODO: Add long description of the pod here.
   #   'User' => ['User/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'User/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'XAIModulesLibs'
 end

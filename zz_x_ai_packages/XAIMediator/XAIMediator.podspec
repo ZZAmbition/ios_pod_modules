@@ -38,7 +38,8 @@ TODO: Add long description of the pod here.
   #   'XAIMediator' => ['XAIMediator/Assets/*.png']
   # }
 
-  s.public_header_files = 'XAIMediator/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = [
+    'XAIMediator/*.h',
+    'XAIMediator/**/*.h'
+  ]
 end

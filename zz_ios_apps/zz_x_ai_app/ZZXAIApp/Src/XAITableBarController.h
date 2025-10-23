@@ -6,10 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XAINavigationController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XAITableViewController : UITableViewController
+@interface XAITableBarController : UITabBarController
 
 @end
 

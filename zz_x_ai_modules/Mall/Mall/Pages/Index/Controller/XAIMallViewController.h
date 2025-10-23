@@ -6,10 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XAIMallViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XAIMallViewController : UIViewController
+
+
+- (instancetype)initWithViewModel;
+- (instancetype)initWithViewModel:(XAIMallViewModel *)viewModel;
 
 @end
 
