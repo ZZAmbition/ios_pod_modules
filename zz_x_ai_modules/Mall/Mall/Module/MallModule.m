@@ -9,7 +9,9 @@
 #import "XAIMallViewController.h"
 @implementation MallModule
 
-
++ (void)load {
+    BFRegister(XAIMallModuleFacadeProtocol)
+}
 
 + (instancetype)sharedInstance {
     static MallModule *instance = nil;
@@ -23,7 +25,7 @@
 
 // 模块启动入口
 - (void)setup {
-    
+    NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
 

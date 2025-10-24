@@ -105,9 +105,9 @@ typedef _Nullable id (^BifrostExceptionHandler)(NSException * _Nonnull exception
  
  @param selector app delegate selector
  @param arguments argument array
- @return the return value of the method implementation in those modules
+ 
  */
-+ (BOOL)checkAllModulesWithSelector:(nonnull SEL)selector
++ (void)checkAllModulesWithSelector:(nonnull SEL)selector
                           arguments:(nullable NSArray*)arguments;
 
 @end

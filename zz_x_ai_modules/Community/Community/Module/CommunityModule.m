@@ -10,6 +10,10 @@
 
 @implementation CommunityModule
 
++ (void)load {
+    BFRegister(XAICommunityModuleFacadeProtocol)
+}
+
 + (instancetype)sharedInstance {
     static CommunityModule *instance = nil;
     static dispatch_once_t onceToken;
@@ -22,7 +26,7 @@
 
 // 模块启动入口
 - (void)setup {
-    
+    NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
 

@@ -22,11 +22,21 @@ target 'ZZXAIApp' do
   pod 'DataService', :path => '../../zz_x_ai_packages/DataService/'
   pod 'XAIMediator', :path => '../../zz_x_ai_packages/XAIMediator/'
   
-  # 管理业务模块、业务包的依赖
+  # 统一管理业务模块、业务包的依赖
   pod 'XAIPackagesLibs', :path => '../../zz_x_ai_packages/'
   pod 'XAIModulesLibs', :path => '../../zz_x_ai_modules/'
   
   
   # 通用依赖
   pod 'Bifrost', :path => '../../zz_ios_packages/Bifrost/'
+end
+
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "13.0"
+    end
+  end
 end

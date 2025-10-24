@@ -51,7 +51,7 @@
     if(!_titleLabel){
         _titleLabel = [UILabel new];
         _titleLabel.font = [UIFont systemFontOfSize:17];
-        _titleLabel.text = @"社区";
+        _titleLabel.text = @"我的";
     }
     return _titleLabel;
 }

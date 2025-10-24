@@ -21,10 +21,30 @@
 
 @implementation XAITableBarController
 
++ (void)load {
+
+    UITabBar.appearance.backgroundColor = [UIColor redColor];
+    UITabBar.appearance.unselectedItemTintColor = [UIColor whiteColor];
+    UITabBar.appearance.translucent = NO;
+    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blueColor], NSFontAttributeName : [UIFont systemFontOfSize:18],NSBackgroundColorAttributeName : [UIColor clearColor]} forState: UIControlStateNormal];
+    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor yellowColor],NSFontAttributeName: [UIFont systemFontOfSize:18],NSBackgroundColorAttributeName : [UIColor clearColor]} forState:UIControlStateSelected];
+    
+    
+    UINavigationBarAppearance *nvbarAppr = [UINavigationBarAppearance new];
+    nvbarAppr.backgroundColor = [UIColor redColor];
+    nvbarAppr.backButtonAppearance.normal.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor clearColor]};
+    nvbarAppr.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor yellowColor],NSFontAttributeName : [UIFont systemFontOfSize:18]};
+    UINavigationBar.appearance.translucent = NO;
+    UINavigationBar.appearance.standardAppearance = nvbarAppr;
+    UINavigationBar.appearance.scrollEdgeAppearance = nvbarAppr;
+
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
- 
+    NSArray *vcs = @[self.homeViewController,self.mallViewController, self.communityViewController, self.userViewController];
+    [self setViewControllers:vcs];
 }
 
 
@@ -46,7 +66,7 @@
         UIViewController *vc = mallModule.getMallViewController;
         _mallViewController = [[XAINavigationController alloc] initWithRootViewController:vc];
         vc.title = @"商城";
-        [_homeViewController.tabBarItem setTitle:@"商城"];
+        [_mallViewController.tabBarItem setTitle:@"商城"];
     }
     return _mallViewController;
 }
@@ -57,7 +77,7 @@
         UIViewController *vc = mallModule.getCommunityViewController;
         _communityViewController = [[XAINavigationController alloc] initWithRootViewController:vc];
         vc.title = @"社区";
-        [_homeViewController.tabBarItem setTitle:@"社区"];
+        [_communityViewController.tabBarItem setTitle:@"社区"];
     }
     return _communityViewController;
 }
@@ -69,7 +89,7 @@
         UIViewController *vc = mallModule.getUserViewController;
         _userViewController = [[XAINavigationController alloc] initWithRootViewController:vc];
         vc.title = @"我的";
-        [_homeViewController.tabBarItem setTitle:@"我的"];
+        [_userViewController.tabBarItem setTitle:@"我的"];
     }
     return _userViewController;
 }

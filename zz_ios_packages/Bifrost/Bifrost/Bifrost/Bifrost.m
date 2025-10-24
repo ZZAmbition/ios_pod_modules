@@ -203,13 +203,11 @@ NSString * const kBifrostExceptionAPIArguments = @"kBifrostExceptionAPIArguments
     return nil;
 }
 
-+ (BOOL)checkAllModulesWithSelector:(SEL)selector arguments:(NSArray*)arguments {
-    BOOL result = NO;
++ (void)checkAllModulesWithSelector:(SEL)selector arguments:(NSArray*)arguments {
     NSArray *modules = [self allRegisteredModules];
     for (Class<BifrostModuleProtocol> class in modules) {
         id<BifrostModuleProtocol> moduleItem = [class sharedInstance];
         if ([moduleItem respondsToSelector:selector]) {
-            
             __block BOOL shouldInvoke = YES;
             if (![BFInstance.moduleInvokeDict objectForKey:NSStringFromClass([moduleItem class])]) {
                 // 如果 modules 里面有 moduleItem 的子类，不 invoke target
@@ -220,28 +218,21 @@ NSString * const kBifrostExceptionAPIArguments = @"kBifrostExceptionAPIArguments
                     }
                 }];
             }
-            
             if (shouldInvoke) {
                 if (![BFInstance.moduleInvokeDict objectForKey:NSStringFromClass([moduleItem class])]) { //cache it
                     [BFInstance.moduleInvokeDict setObject:moduleItem forKey:NSStringFromClass([moduleItem class])];
                 }
-                
-                BOOL ret = NO;
-                [self invokeTarget:moduleItem action:selector arguments:arguments returnValue:&ret];
-                if (!result) {
-                    result = ret;
-                }
+                void *result;
+                [self invokeTarget:moduleItem action:selector arguments:arguments result: &result];
             }
         }
     }
-    return result;
 }
 
 
-+ (BOOL)invokeTarget:(id)target
++ (void)invokeTarget:(id)target
               action:(_Nonnull SEL)selector
-           arguments:(NSArray* _Nullable )arguments
-         returnValue:(void* _Nullable)result; {
+           arguments:(NSArray* _Nullable )arguments result:(void *)result{
     if (target && [target respondsToSelector:selector]) {
         NSMethodSignature *sig = [target methodSignatureForSelector:selector];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:sig];
@@ -298,22 +289,9 @@ NSString * const kBifrostExceptionAPIArguments = @"kBifrostExceptionAPIArguments
             [invocation setArgument:&argument atIndex:argIndex];
         }
         [invocation invoke];
-        NSString *methodReturnType = [NSString stringWithUTF8String:sig.methodReturnType];
-        if (result && ![methodReturnType isEqualToString:@"v"]) { //if return type is not void
-            if([methodReturnType isEqualToString:@"@"]) { //if it's kind of NSObject
-                CFTypeRef cfResult = nil;
-                [invocation getReturnValue:&cfResult]; //this operation won't retain the result
-                if (cfResult) {
-                    CFRetain(cfResult); //we need to retain it manually
-                    *(void**)result = (__bridge_retained void *)((__bridge_transfer id)cfResult);
-                }
-            } else {
-                [invocation getReturnValue:result];
-            }
-        }
-        return YES;
+//        NSString *methodReturnType = [NSString stringWithUTF8String:sig.methodReturnType];
+        [invocation getReturnValue:result];
     }
-    return NO;
 }
 
 + (void)hackUnrecognizedSelecotorExceptionForModule:(Class)class {

@@ -6,8 +6,12 @@
 //
 
 #import "LoginModule.h"
-
+#import "XAILoginViewController.h"
 @implementation LoginModule
+
++ (void)load {
+    BFRegister(XAILoginModuleFacadeProtocol);
+}
 
 + (instancetype)sharedInstance {
     static LoginModule *instance = nil;
@@ -21,8 +25,12 @@
 
 // 模块启动入口
 - (void)setup {
-    
+    NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
+
+- (UIViewController *)getLoginViewController { 
+    return [[XAILoginViewController alloc] initWithViewModel];
+}
 
 @end

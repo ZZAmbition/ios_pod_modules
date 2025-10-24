@@ -10,6 +10,10 @@
 
 @implementation HomeModule
 
++ (void)load {
+    BFRegister(XAIHomeModuleFacadeProtocol)
+}
+
 
 + (instancetype)sharedInstance {
     static HomeModule *instance = nil;
@@ -23,7 +27,7 @@
 
 // 模块启动入口
 - (void)setup {
-    
+    NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
 
@@ -31,4 +35,10 @@
     return [[XAIHomeViewController alloc] initWithViewModel];
 }
 
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+    return YES;
+}
 @end

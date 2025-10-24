@@ -6,7 +6,11 @@
 //
 
 #import "AppDelegate.h"
+#import "XAITableBarController.h"
+#import <Bifrost/Bifrost.h>
 
+
+#define Safe(obj) obj ? obj : [NSNull null]
 @interface AppDelegate ()
 
 @end
@@ -15,7 +19,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = [XAITableBarController new];
+    
+    
+    //
+    [Bifrost setupAllModules];
+    [Bifrost checkAllModulesWithSelector:_cmd arguments:@[Safe(application), Safe(launchOptions)]];
+    
     return YES;
 }
 

@@ -9,6 +9,9 @@
 #import "XAIUserViewController.h"
 @implementation UserModule
 
++ (void)load {
+    BFRegister(XAIUserModuleFacadeProtocol)
+}
 
 
 + (instancetype)sharedInstance {
@@ -23,7 +26,7 @@
 
 // 模块启动入口
 - (void)setup {
-    
+    NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
 

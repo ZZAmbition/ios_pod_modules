@@ -6,10 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XAILoginViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XAILoginViewController : UIViewController
+
+- (instancetype)initWithViewModel;
+- (instancetype)initWithViewModel:(XAILoginViewModel *)viewModel;
 
 @end
 
