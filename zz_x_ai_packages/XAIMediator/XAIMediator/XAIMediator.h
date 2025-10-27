@@ -14,5 +14,8 @@
 #import "XAIMallModuleFacadeProtocol.h"
 #import "XAIUserModuleFacadeProtocol.h"
 
+#import "RouteManager.h"
+
+
 
 #endif /* XAIMediator_h */

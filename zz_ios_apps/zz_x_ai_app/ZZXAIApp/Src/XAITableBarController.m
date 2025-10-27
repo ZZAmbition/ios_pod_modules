@@ -43,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     NSArray *vcs = @[self.homeViewController,self.mallViewController, self.communityViewController, self.userViewController];
     [self setViewControllers:vcs];
 }

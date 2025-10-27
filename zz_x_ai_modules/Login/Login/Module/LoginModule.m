@@ -7,6 +7,9 @@
 
 #import "LoginModule.h"
 #import "XAILoginViewController.h"
+#import "LoginModule+Route.h"
+
+
 @implementation LoginModule
 
 + (void)load {
@@ -26,6 +29,9 @@
 // 模块启动入口
 - (void)setup {
     NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+    
+    //路由注册
+    [[self class] registLoginRoute];
 }
 
 

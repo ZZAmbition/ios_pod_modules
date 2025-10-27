@@ -28,13 +28,19 @@ PODS:
   - Masonry (1.1.0)
   - User (0.1.0):
     - XAIModulesLibs
+  - XAICommon (0.1.0)
   - XAIMediator (0.1.0)
   - XAIModulesLibs (0.1.0):
     - Bifrost
+    - DataService
     - Masonry
+    - XAICommon
     - XAIMediator
+    - ZZKit
   - XAIPackagesLibs (0.1.0):
     - AFNetworking
+    - ZZKit
+  - ZZKit (0.1.0)
 
 DEPENDENCIES:
   - Bifrost (from `../../zz_ios_packages/Bifrost/`)
@@ -44,9 +50,11 @@ DEPENDENCIES:
   - Login (from `../../zz_x_ai_modules/Login/`)
   - Mall (from `../../zz_x_ai_modules/Mall/`)
   - User (from `../../zz_x_ai_modules/User/`)
+  - XAICommon (from `../../zz_x_ai_packages/XAICommon/`)
   - XAIMediator (from `../../zz_x_ai_packages/XAIMediator/`)
   - XAIModulesLibs (from `../../zz_x_ai_modules/`)
   - XAIPackagesLibs (from `../../zz_x_ai_packages/`)
+  - ZZKit (from `../../zz_ios_packages/ZZKit/`)
 
 SPEC REPOS:
   trunk:
@@ -68,12 +76,16 @@ EXTERNAL SOURCES:
     :path: "../../zz_x_ai_modules/Mall/"
   User:
     :path: "../../zz_x_ai_modules/User/"
+  XAICommon:
+    :path: "../../zz_x_ai_packages/XAICommon/"
   XAIMediator:
     :path: "../../zz_x_ai_packages/XAIMediator/"
   XAIModulesLibs:
     :path: "../../zz_x_ai_modules/"
   XAIPackagesLibs:
     :path: "../../zz_x_ai_packages/"
+  ZZKit:
+    :path: "../../zz_ios_packages/ZZKit/"
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
@@ -85,10 +97,12 @@ SPEC CHECKSUMS:
   Mall: 63740110274148568a3e5839d3d170e847b9078e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   User: b05550d96d5a40fe33682148b533bc8469833af1
+  XAICommon: bf0dbcea59e65ce61b44d05d822eae7441cdeca2
   XAIMediator: ef6d46d42d4e72a482ef3c9f9734f7bb43300b1f
-  XAIModulesLibs: b18450e448db1b08e715edf3fb39fb043c0c1b29
-  XAIPackagesLibs: 44aa16b488383755db2808d685e2e9d2821342f8
+  XAIModulesLibs: ea7927e5987cb7a36dbf3274099def140d3b240f
+  XAIPackagesLibs: 5a192891b732b6aa5bb86104322f58c224afa695
+  ZZKit: 7f31de55167246785d0d014af0335a18fc38c449
 
-PODFILE CHECKSUM: bff076e5b85ad9e7f32baeabbfdbd26a5003c4cb
+PODFILE CHECKSUM: eeca1edfb743adee3ed8134cb64c63069b289713
 
 COCOAPODS: 1.16.2

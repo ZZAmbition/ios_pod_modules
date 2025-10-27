@@ -21,6 +21,7 @@ target 'ZZXAIApp' do
   # 业务模块依赖的业务包
   pod 'DataService', :path => '../../zz_x_ai_packages/DataService/'
   pod 'XAIMediator', :path => '../../zz_x_ai_packages/XAIMediator/'
+  pod 'XAICommon', :path => '../../zz_x_ai_packages/XAICommon/'
   
   # 统一管理业务模块、业务包的依赖
   pod 'XAIPackagesLibs', :path => '../../zz_x_ai_packages/'
@@ -29,6 +30,7 @@ target 'ZZXAIApp' do
   
   # 通用依赖
   pod 'Bifrost', :path => '../../zz_ios_packages/Bifrost/'
+  pod 'ZZKit', :path => '../../zz_ios_packages/ZZKit/'
 end
 
 

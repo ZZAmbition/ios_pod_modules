@@ -1,29 +1,70 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Bifrost (1.0.0)
+  - DataService (0.1.0):
+    - XAIPackagesLibs
   - Masonry (1.1.0)
   - User (0.1.0):
     - XAIModulesLibs
+  - XAIMediator (0.1.0)
   - XAIModulesLibs (0.1.0):
+    - Bifrost
     - Masonry
+    - XAIMediator
+  - XAIPackagesLibs (0.1.0):
+    - AFNetworking
 
 DEPENDENCIES:
+  - Bifrost (from `../../../zz_ios_packages/Bifrost/`)
+  - DataService (from `../../../zz_x_ai_packages/DataService/`)
   - User (from `../`)
+  - XAIMediator (from `../../../zz_x_ai_packages/XAIMediator/`)
   - XAIModulesLibs (from `../../`)
+  - XAIPackagesLibs (from `../../../zz_x_ai_packages/`)
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - Masonry
 
 EXTERNAL SOURCES:
+  Bifrost:
+    :path: "../../../zz_ios_packages/Bifrost/"
+  DataService:
+    :path: "../../../zz_x_ai_packages/DataService/"
   User:
     :path: "../"
+  XAIMediator:
+    :path: "../../../zz_x_ai_packages/XAIMediator/"
   XAIModulesLibs:
     :path: "../../"
+  XAIPackagesLibs:
+    :path: "../../../zz_x_ai_packages/"
 
 SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  Bifrost: 5514460d66d916822baf7a222baee88bfe230e8a
+  DataService: 6c63aeae6e0894e38c58776d753e5798817c76ce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  User: 3d4fb830f15aff90a1e92eada93ef0ab163357f0
-  XAIModulesLibs: da9f9d29cbfa9fb58ebec27fb875bd2de91e193e
+  User: b05550d96d5a40fe33682148b533bc8469833af1
+  XAIMediator: ef6d46d42d4e72a482ef3c9f9734f7bb43300b1f
+  XAIModulesLibs: b18450e448db1b08e715edf3fb39fb043c0c1b29
+  XAIPackagesLibs: 44aa16b488383755db2808d685e2e9d2821342f8
 
-PODFILE CHECKSUM: 2d9293283f085d2632492cc18ea73b96602853b2
+PODFILE CHECKSUM: b5956612e1d0a8ac7a7314b1726596cbdb4ae981
 
 COCOAPODS: 1.16.2

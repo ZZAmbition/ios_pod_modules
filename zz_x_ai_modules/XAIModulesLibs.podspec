@@ -13,6 +13,12 @@ Pod::Spec.new do |s|
 
 
   s.dependency 'Masonry'
+  
   s.dependency 'XAIMediator'
+  s.dependency 'DataService'
+  s.dependency 'XAICommon'
+  
   s.dependency 'Bifrost'
+  s.dependency 'ZZKit'
+  
 end

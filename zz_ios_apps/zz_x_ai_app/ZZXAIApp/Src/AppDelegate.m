@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import "XAITableBarController.h"
-#import <Bifrost/Bifrost.h>
+#import <Bifrost/BifrostHeader.h>
 
 
 #define Safe(obj) obj ? obj : [NSNull null]
@@ -28,6 +28,7 @@
     //
     [Bifrost setupAllModules];
     [Bifrost checkAllModulesWithSelector:_cmd arguments:@[Safe(application), Safe(launchOptions)]];
+    [Bifrost routeConfig];
     
     return YES;
 }
