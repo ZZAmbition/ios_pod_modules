@@ -6,10 +6,9 @@
 //
 
 #import "XAIUserViewController.h"
-#import <Masonry/Masonry.h>
 #import <XAIMediator/XAIMediator.h>
 #import <Bifrost/BifrostHeader.h>
-
+#import <ZZKit/ZZKit.h>
 
 @interface XAIUserViewController ()
 
@@ -42,20 +41,28 @@
     [self setupView];
 }
 
+
+
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self setupViewLayout];
+}
+
 - (void)setupView {
     [self.view addSubview:self.titleLabel];
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.centerY.equalTo(self.view.mas_centerY);
-    }];
-    
     [self.view addSubview:self.loginBtn];
-    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-20);
-        make.height.mas_equalTo(20);
-        make.width.mas_equalTo(100);
-    }];
+}
+
+
+- (void)setupViewLayout {
+    self.titleLabel.centerX = self.view.width/2;
+    self.titleLabel.centerY = self.view.height/2;
+    
+    
+    self.loginBtn.width = 100;
+    self.loginBtn.centerX = self.view.width/2;
+    self.loginBtn.top = 50;
     
 }
 
@@ -68,6 +75,7 @@
         _titleLabel = [UILabel new];
         _titleLabel.font = [UIFont systemFontOfSize:17];
         _titleLabel.text = @"我的";
+        [_titleLabel sizeToFit];
     }
     return _titleLabel;
 }
@@ -78,6 +86,7 @@
         [_loginBtn setTitle:@"登录" forState:(UIControlStateNormal)];
         _loginBtn.backgroundColor = [UIColor redColor];
         _loginBtn.tintColor = [UIColor yellowColor];
+        [_loginBtn sizeToFit];
         [_loginBtn addTarget:self action:@selector(clickedLoginBtn:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _loginBtn;

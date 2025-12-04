@@ -8,7 +8,7 @@
 #import "LoginModule+Route.h"
 #import <Bifrost/BifrostHeader.h>
 #import <XAIMediator/XAIMediator.h>
-#import <ZZKit/AppStruct.h>
+#import <ZZKit/ZZKit.h>
 #import "XAILoginViewController.h"
 
 

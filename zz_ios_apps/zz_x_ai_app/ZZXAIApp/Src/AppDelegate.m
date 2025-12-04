@@ -24,15 +24,13 @@
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [XAITableBarController new];
     
-    
     //
     [Bifrost setupAllModules];
     [Bifrost checkAllModulesWithSelector:_cmd arguments:@[Safe(application), Safe(launchOptions)]];
     [Bifrost routeConfig];
-    
+
     return YES;
 }
-
 
 
 

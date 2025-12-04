@@ -6,7 +6,7 @@
 //
 
 #import "XAICommunityViewController.h"
-#import <Masonry/Masonry.h>
+#import <ZZKit/ZZKit.h>
 
 @interface XAICommunityViewController ()
 
@@ -38,13 +38,19 @@
     [self setupView];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self setupViewLayout];
+}
+
 - (void)setupView {
     [self.view addSubview:self.titleLabel];
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.centerY.equalTo(self.view.mas_centerY);
-    }];
-    
+}
+
+
+- (void)setupViewLayout {
+    self.titleLabel.centerX = self.view.width/2;
+    self.titleLabel.centerY = self.view.height/2;
 }
 
 - (UILabel *)titleLabel {
@@ -52,6 +58,7 @@
         _titleLabel = [UILabel new];
         _titleLabel.font = [UIFont systemFontOfSize:17];
         _titleLabel.text = @"社区";
+        [_titleLabel sizeToFit];
     }
     return _titleLabel;
 }

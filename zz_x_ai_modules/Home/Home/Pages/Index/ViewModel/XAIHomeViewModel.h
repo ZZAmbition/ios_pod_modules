@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XAIHomeViewModel : NSObject
 
+@property(nonatomic,strong)NSArray *dataSource;
+
 @end
 
 NS_ASSUME_NONNULL_END

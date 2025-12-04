@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'XAIPackagesLibs' }
 
 
-  s.dependency 'Masonry'
+
   
   s.dependency 'XAIMediator'
   s.dependency 'DataService'

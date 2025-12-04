@@ -22,12 +22,25 @@
 @implementation XAITableBarController
 
 + (void)load {
-
-    UITabBar.appearance.backgroundColor = [UIColor redColor];
-    UITabBar.appearance.unselectedItemTintColor = [UIColor whiteColor];
-    UITabBar.appearance.translucent = NO;
-    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blueColor], NSFontAttributeName : [UIFont systemFontOfSize:18],NSBackgroundColorAttributeName : [UIColor clearColor]} forState: UIControlStateNormal];
-    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor yellowColor],NSFontAttributeName: [UIFont systemFontOfSize:18],NSBackgroundColorAttributeName : [UIColor clearColor]} forState:UIControlStateSelected];
+    
+    UITabBarAppearance *appearance = [[UITabBarAppearance alloc] init];
+    appearance.backgroundColor = [UIColor redColor];
+    UITabBarItemAppearance *itemAppearance = [[UITabBarItemAppearance alloc] init];
+    itemAppearance.normal.titleTextAttributes = @{
+        NSFontAttributeName: [UIFont systemFontOfSize:18.0],
+        NSForegroundColorAttributeName: [UIColor whiteColor]
+    };
+    itemAppearance.selected.titleTextAttributes = @{
+        NSFontAttributeName: [UIFont systemFontOfSize:18.0 weight:UIFontWeightMedium],
+        NSForegroundColorAttributeName: [UIColor yellowColor]
+    };
+    appearance.stackedLayoutAppearance = itemAppearance;
+    appearance.inlineLayoutAppearance = itemAppearance;
+    appearance.compactInlineLayoutAppearance = itemAppearance;
+    [[UITabBar appearance] setStandardAppearance:appearance];
+    if (@available(iOS 15.0, *)) {
+        [[UITabBar appearance] setScrollEdgeAppearance:appearance];
+    }
     
     
     UINavigationBarAppearance *nvbarAppr = [UINavigationBarAppearance new];
@@ -37,7 +50,7 @@
     UINavigationBar.appearance.translucent = NO;
     UINavigationBar.appearance.standardAppearance = nvbarAppr;
     UINavigationBar.appearance.scrollEdgeAppearance = nvbarAppr;
-
+    
 }
 
 
