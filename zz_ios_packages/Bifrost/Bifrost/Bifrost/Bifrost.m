@@ -9,6 +9,7 @@
 #import "Bifrost.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
+#import "Bifrost+JLRoute.h"
 
 #define BFLog(msg) NSLog(@"[Bifrost] %@", (msg))
 #define BFInstance [Bifrost sharedInstance]
@@ -126,6 +127,7 @@ NSString * const kBifrostExceptionAPIArguments = @"kBifrostExceptionAPIArguments
 }
 
 + (void)setupAllModules {
+    [self setupJLRoute];
     NSArray *modules = [self allRegisteredModules];
     for (Class<BifrostModuleProtocol> moduleClass in modules) {
         @try {

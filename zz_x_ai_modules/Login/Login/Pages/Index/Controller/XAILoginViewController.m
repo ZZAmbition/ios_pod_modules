@@ -7,6 +7,7 @@
 
 #import "XAILoginViewController.h"
 #import <ZZKit/ZZKit.h>
+#import <DataService/DataService.h>
 
 @interface XAILoginViewController ()
 
@@ -30,6 +31,17 @@
         self.xaiLoginViewModel = viewModel;
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    UserInfoRequest *req = [UserInfoRequest new];
+    req.uid = @"110";
+    [XAINetWorkManager sendRequest:req success:^(XAINetWorkResponse * _Nullable obj) {
+        
+    } failure:^(XAINetWorkResponse * _Nullable obj) {
+        
+    }];
 }
 
 

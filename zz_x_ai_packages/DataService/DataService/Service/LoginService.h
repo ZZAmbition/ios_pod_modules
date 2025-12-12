@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XAINetWorkHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoginService : NSObject
+@interface LoginRequest : XAINetWorkRequest
 
 @end
 

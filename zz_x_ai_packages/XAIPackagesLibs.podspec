@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking'
   s.dependency 'ZZKit'
   s.dependency 'Reflow'
+  s.dependency 'YYModel'
 end

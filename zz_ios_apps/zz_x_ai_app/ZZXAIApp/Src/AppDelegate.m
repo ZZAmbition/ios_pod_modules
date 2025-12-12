@@ -27,7 +27,7 @@
     //
     [Bifrost setupAllModules];
     [Bifrost checkAllModulesWithSelector:_cmd arguments:@[Safe(application), Safe(launchOptions)]];
-    [Bifrost routeConfig];
+    
 
     return YES;
 }

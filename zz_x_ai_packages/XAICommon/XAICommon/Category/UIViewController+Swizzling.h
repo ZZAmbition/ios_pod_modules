@@ -7,9 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PageColorSwizzlingDelegate <NSObject>
+@protocol PageThemeSwizzlingDelegate <NSObject>
 
+@optional
 
+- (UIColor *)pageColor;
 @end
 
 NS_ASSUME_NONNULL_BEGIN

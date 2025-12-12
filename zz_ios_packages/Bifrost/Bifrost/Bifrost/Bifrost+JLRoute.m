@@ -9,7 +9,7 @@
 #import "JLRoutes.h"
 @implementation Bifrost (JLRoute)
 
-+ (void)routeConfig{
++ (void)setupJLRoute{
     [JLRoutes setVerboseLoggingEnabled:YES];
 }
 
@@ -23,15 +23,6 @@
     }];
 }
 
-+ (void)registerRoute:(Class<BifrostRouteProtocol>)route with:(NSString *)url{
-    NSString *str = url;
-    if ([url containsString:@"://"]){
-        str = [url componentsSeparatedByString:@"://"].lastObject;
-    }
-    [[JLRoutes globalRoutes] addRoute:str handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
-        return [route handleRouteParameters:parameters];
-    }];
-}
 
 + (void)openRouteWithURL:(NSString *)url parameters:(nullable NSDictionary<NSString *, id> *)parameters{
     [[JLRoutes globalRoutes] routeURL:[NSURL URLWithString:url] withParameters:parameters];

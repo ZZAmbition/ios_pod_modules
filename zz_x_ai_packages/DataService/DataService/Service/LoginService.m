@@ -7,6 +7,7 @@
 
 #import "LoginService.h"
 
-@implementation LoginService
+@implementation LoginRequest
+
 
 @end

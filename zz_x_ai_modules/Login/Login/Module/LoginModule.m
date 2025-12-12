@@ -11,7 +11,7 @@
 
 
 @implementation LoginModule
-
+//程序启动时加载
 + (void)load {
     BFRegister(XAILoginModuleFacadeProtocol);
 }

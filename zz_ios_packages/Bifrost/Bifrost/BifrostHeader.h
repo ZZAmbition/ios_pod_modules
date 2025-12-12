@@ -10,7 +10,6 @@
 #define BifrostHeader_h
 
 #import "Bifrost.h"
-#import "Bifrost+Router.h"
 #import "BifrostProtocol.h"
 #import "Bifrost+JLRoute.h"
 

@@ -39,7 +39,9 @@ PODS:
   - XAIPackagesLibs (0.1.0):
     - AFNetworking
     - Reflow
+    - YYModel
     - ZZKit
+  - YYModel (1.0.4)
   - ZZKit (0.1.0)
 
 DEPENDENCIES:
@@ -60,6 +62,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - YYModel
 
 EXTERNAL SOURCES:
   Bifrost:
@@ -102,7 +105,8 @@ SPEC CHECKSUMS:
   XAICommon: bf0dbcea59e65ce61b44d05d822eae7441cdeca2
   XAIMediator: ef6d46d42d4e72a482ef3c9f9734f7bb43300b1f
   XAIModulesLibs: 36cc644f92e62282a9ea1bba6d7e9e786a4ca4c6
-  XAIPackagesLibs: 41bf0d1ef66aeebb1ffe0bacb30d7f11ad7c0a4f
+  XAIPackagesLibs: 9472a6231446709193d7143b8e652af61d9c29f5
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZZKit: 8a70be25f4ac83f117be558c67a80f1c4d7efb26
 
 PODFILE CHECKSUM: 8fbb5a365af55a11249f5660954f8c7ac24a96f8

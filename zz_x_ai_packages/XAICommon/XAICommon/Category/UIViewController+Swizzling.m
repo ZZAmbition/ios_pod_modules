@@ -33,10 +33,9 @@
 
 // 先走这个方法，然后调用主类的viewDidLoad
 - (void)swizzling_viewDidLoad{
-    if ([self conformsToProtocol:@protocol(PageColorSwizzlingDelegate)]) {
+    if ([self conformsToProtocol:@protocol(PageThemeSwizzlingDelegate)]) {
         self.view.backgroundColor = [UIColor whiteColor];
     }
-   
     //背景view是否延伸到导航栏下面
 //    self.extendedLayoutIncludesOpaqueBars = YES;
     self.edgesForExtendedLayout = UIRectEdgeNone;

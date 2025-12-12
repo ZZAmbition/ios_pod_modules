@@ -6,35 +6,25 @@
 //
 
 #import "XAINetWorkRequest.h"
+#import "XAINetWorkWrapper.h"
+
 
 @implementation XAINetWorkRequest
 
-- (instancetype)init{
-    if(self = [super init]){
-        
-    }
-    return self;
-}
-
 - (NSString *)baseURL{
-    return @"https://ad.td-robot.com";
+    return @"http://127.0.0.1:4523/m1/7490051-7225482-default";
 }
 
-- (HTTPMethod)httpMethod{
+- (HTTPMethod)method{
     return HTTPMethodPost;
 }
 
 - (NSDictionary *)headers{
-    //待实现
-    return [NSDictionary dictionary];
+    return nil;
 }
 
-- (NSDictionary *)queryParameters{
-    return [NSDictionary dictionary];
-}
-
-- (nonnull NSDictionary *)parameters { 
-    return [NSDictionary dictionary];
+- (NSDictionary *)parameters {
+    return nil;
 }
 
 
@@ -44,6 +34,10 @@
                            NSStringFromClass([self class]),
                            __func__];
     return nil;
+}
+
+- (id<XAINetWorkWrapRequestProtocol>)wrapper { 
+    return [XAINetWorkRequestWrapper new];
 }
 
 
