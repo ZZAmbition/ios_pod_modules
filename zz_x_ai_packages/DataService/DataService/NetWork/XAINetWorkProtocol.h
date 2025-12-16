@@ -38,6 +38,7 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 - (id<XAINetWorkWrapRequestProtocol>)wrapper;
 - (id<XAINetWorkParserProtocol>)parser;
 
+
 - (Class)resultClass;  //返回数据类型
 - (NSString *)resultKey; // json key有返回值多解析一层
 
