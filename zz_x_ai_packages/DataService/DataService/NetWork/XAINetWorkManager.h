@@ -6,13 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XAINetWorkResponse.h"
 #import "XAINetWorkProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^XAINetWorkSuccessHandler)(XAINetWorkResponse *  _Nullable obj);
-typedef void(^XAINetWorkFailureHandler)(XAINetWorkResponse *  _Nullable obj);
+
 
 @interface XAINetWorkManager : NSObject
 

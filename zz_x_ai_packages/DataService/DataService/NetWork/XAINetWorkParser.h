@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XAINetWorkProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XAINetWorkParser : NSObject
+@interface XAINetWorkParser : NSObject <XAINetWorkParserProtocol>
 
 @end
 

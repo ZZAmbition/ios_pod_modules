@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-typedef NS_ENUM(NSUInteger, XAINetWorkResponseState) {
+//服务器自定义响应码
+typedef NS_ENUM(NSUInteger, XAINetWorkResponseCode) {
     //预留
     XAINetWorkResponseStateXX = 0
 };
@@ -18,12 +18,15 @@ typedef NS_ENUM(NSUInteger, XAINetWorkResponseState) {
 
 @interface XAINetWorkResponse : NSObject
 
-//状态码
-@property(nonatomic,assign)XAINetWorkResponseState state;
-
-@property(nonatomic,assign)NSString* msg;
+//http code
+@property(nonatomic,assign)NSInteger stateCode;
+//服务器code
+@property(nonatomic,assign)XAINetWorkResponseCode code;
+//服务器消息
+@property(nonatomic,strong)NSString* msg;
 
 @property(nonatomic,strong)id result;
+
 
 
 @end

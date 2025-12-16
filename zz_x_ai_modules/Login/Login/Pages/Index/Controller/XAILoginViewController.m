@@ -38,9 +38,9 @@
     UserInfoRequest *req = [UserInfoRequest new];
     req.uid = @"110";
     [XAINetWorkManager sendRequest:req success:^(XAINetWorkResponse * _Nullable obj) {
-        
-    } failure:^(XAINetWorkResponse * _Nullable obj) {
-        
+        NSLog(@"%@",obj);
+    } failure:^(XAINetWorkError * _Nullable error) {
+        NSLog(@"%@",error);
     }];
 }
 

@@ -7,7 +7,7 @@
 
 #import "XAINetWorkRequest.h"
 #import "XAINetWorkWrapper.h"
-
+#import "XAINetWorkParser.h"
 
 @implementation XAINetWorkRequest
 
@@ -16,7 +16,7 @@
 }
 
 - (HTTPMethod)method{
-    return HTTPMethodPost;
+    return HTTPMethodGet;
 }
 
 - (NSDictionary *)headers{
@@ -39,6 +39,20 @@
 - (id<XAINetWorkWrapRequestProtocol>)wrapper { 
     return [XAINetWorkRequestWrapper new];
 }
+
+- (id<XAINetWorkParserProtocol>)parser { 
+    return [XAINetWorkParser new];
+}
+
+- (Class)resultClass { 
+    return Nil;
+}
+
+- (NSString *)resultKey { 
+    return nil;
+}
+
+
 
 
 @end

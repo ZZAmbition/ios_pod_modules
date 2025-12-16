@@ -4,12 +4,18 @@
 //
 //  Created by zz on 2025/12/12.
 //
+#import "XAINetWorkResponse.h"
+#import "XAINetWorkError.h"
+
+@protocol XAINetWorkWrapRequestProtocol;
+@protocol XAINetWorkParserProtocol;
+
+typedef void(^XAINetWorkSuccessHandler)(XAINetWorkResponse * obj);
+typedef void(^XAINetWorkFailureHandler)(XAINetWorkError * error);
 
 #ifndef XAINetWorkProtocol_h
 #define XAINetWorkProtocol_h
 
-@protocol XAINetWorkWrapRequestProtocol;
-@protocol XAINetWorkParserProtocol;
 
 #pragma mark -- http请求
 
@@ -30,11 +36,10 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 - (NSDictionary *)parameters;
 - (NSDictionary *)headers;
 - (id<XAINetWorkWrapRequestProtocol>)wrapper;
-//- (id<XAINetWorkParserProtocol>)parse;
+- (id<XAINetWorkParserProtocol>)parser;
 
-@optional
-//返回数据类型
-- (Class)resultClass;
+- (Class)resultClass;  //返回数据类型
+- (NSString *)resultKey; // json key有返回值多解析一层
 
 @end
 
@@ -56,8 +61,11 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 
 @protocol XAINetWorkParserProtocol <NSObject>
 
-- (void)parse:(id)response;
-
+- (void)parse:(id)response
+  resultClass:(Class)resultClass
+    resultKey:(NSString *)resultKey
+      success:(XAINetWorkSuccessHandler)successHandler
+      failure:(XAINetWorkFailureHandler)failureHandler;
 
 @end
 

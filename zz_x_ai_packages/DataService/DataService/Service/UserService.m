@@ -6,6 +6,7 @@
 //
 
 #import "UserService.h"
+#import "UserModel.h"
 
 @implementation UserInfoRequest
 
@@ -18,6 +19,11 @@
         @"uid":self.uid
     };
 }
+
+- (Class)resultClass{
+    return [UserInfoModel class];
+}
+
 
 @end
 
