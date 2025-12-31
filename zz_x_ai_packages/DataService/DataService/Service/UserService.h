@@ -18,9 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface UserOrderRequest : XAINetWorkRequest
-//订单类型
-@property(nonatomic, assign)NSInteger orderType;
+@interface UserGoodsAddressListRequest : XAINetWorkRequest
+
 
 @end
 

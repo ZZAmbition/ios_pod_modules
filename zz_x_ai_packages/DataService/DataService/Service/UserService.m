@@ -31,17 +31,21 @@
 
 
 
-@implementation UserOrderRequest
+@implementation UserGoodsAddressListRequest
 
 
 - (NSString *)path{
-    return @"/getUserOrder";
+    return @"/goods_address_list";
 }
 
-- (NSDictionary *)parameters{
-    return @{
-        @"type":[NSNumber numberWithLong:self.orderType]
-    };
+
+- (Class)resultClass{
+    return [UserGoodsAddressModel class];
+}
+
+
+- (NSString *)resultKey{
+    return @"address";
 }
 
 @end

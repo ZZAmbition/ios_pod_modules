@@ -23,7 +23,6 @@
     if(self.viewControllers.count > 0){
         viewController.hidesBottomBarWhenPushed = YES;
     }
-    
     [super pushViewController:viewController animated:animated];
 }
 

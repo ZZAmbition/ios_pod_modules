@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign)NSInteger uid;
 @property(nonatomic, strong)NSString *name;
 @property(nonatomic, strong)NSString *tel;
-@property(nonatomic, strong)NSArray<UserGoodsAddressModel *> *address;
+
 
 @end
 

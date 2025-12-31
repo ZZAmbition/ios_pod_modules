@@ -12,7 +12,7 @@ iOS模块化方案，主要是通过解决多个模块之间的耦合实现，�
 2. 路由服务： 通过注册路由（即路径字符串），实现不同模块之间的调用，适合页面跳转场景
 3. 消息转发： 只需要知道实例对象的方法名就能实现调用，无需引入头文件，缺点是没有类型和编译判断，难以找问题和维护。
 
-所以通常就采用上面两种方案结合使用，达到组件化的目的。
+所以通常就采用上面两种方案结合使用，达到模块化的目的。
 
 
 
@@ -32,4 +32,44 @@ iOS模块化方案，主要是通过解决多个模块之间的耦合实现，�
    - 第三层通用依赖库： 通用依赖库是复用程度最高的，因为不包含业务逻辑。
 
 ![模块化](document/模块化.png)
+
+
+
+## 网络架构
+
+**核心：使用命令模式，把每个请求封装成一个独立对象，每个请求的业务逻辑自己处理，实现百分百的自控，而不用每次修改接口都需要去修改网络管理类**。
+
+![网络架构](/Users/zz/Desktop/ios_pod_modules/document/网络架构.png)
+
+
+
+
+
+## MVVM
+
+- `Model` 对应特定的接口数据模型
+- `View`  /`Controller`  负责UI布局、生命周期 ，监听ViewModel 状态并更新UI
+- `ViewModel` 负责处理数据，Service，提供数据，处理view的交互事件
+- `Service`  网络服务、数据服务、或者特定的业务服务
+- `UIModel`  对应特定的UI数据模型
+
+1. 持有关系: MVVM中View和Controller归类为View、View -> ViewModel -> Model/Service。
+2. 数据流向: Model/Service -> ViewModel -> View、ViewModel 可以通过block、代理、或者绑定框架更新View
+3. 动作流向: View -> ViewModel -> Model/Service
+4. ViewModel不能持有View、Model/Service不能持有ViewModel、View和Model互不知道/互不持有
+5. View在需要复杂数据时可以创建对应的UI专属Model，避免直接使用业务Model(数据模型)，UI Model由ViewModel创建并管理
+
+
+
+![mvvm](/Users/zz/Desktop/ios_pod_modules/document/mvvm.png)
+
+
+
+
+
+## 状态管理
+
+
+
+[Reflow](https://github.com/Zepo/Reflow) 一个受 Flux架构、Redux 和 Vuex 启发的 Objective-C 单向数据流框架
 

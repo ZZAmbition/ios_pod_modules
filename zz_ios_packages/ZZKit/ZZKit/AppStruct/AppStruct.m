@@ -8,14 +8,46 @@
 #import "AppStruct.h"
 
 @implementation AppStruct
-+ (UIWindow *)window{
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    if(window){
-        return window;
+//+ (UIWindow *)window{
+//    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//    if(window){
+//        return window;
+//    }
+//    UIWindow *rootWindow = [UIApplication sharedApplication].delegate.window;
+//    return rootWindow;
+//}
+
++ (UIWindow *)window {
+    if (@available(iOS 13.0, *)) {
+        for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+            if (scene.activationState == UISceneActivationStateForegroundActive) {
+                if ([scene isKindOfClass:[UIWindowScene class]]) {
+                    UIWindowScene *windowScene = (UIWindowScene *)scene;
+                    for (UIWindow *window in windowScene.windows) {
+                        if (window.isKeyWindow) {
+                            return window;
+                        }
+                    }
+                }
+            }
+        }
+        // 如果没找到 isKeyWindow 的，返回第一个 foregroundActive scene 的第一个 window（兜底）
+        for (UIScene *scene in [UIApplication sharedApplication].connectedScenes) {
+            if (scene.activationState == UISceneActivationStateForegroundActive) {
+                if ([scene isKindOfClass:[UIWindowScene class]]) {
+                    UIWindowScene *windowScene = (UIWindowScene *)scene;
+                    if (windowScene.windows.count > 0) {
+                        return windowScene.windows.firstObject;
+                    }
+                }
+            }
+        }
     }
-    UIWindow *rootWindow = [UIApplication sharedApplication].delegate.window;
-    return rootWindow;
+    
+    // iOS 12 及以下，或 fallback
+    return [UIApplication sharedApplication].keyWindow;
 }
+
 
 + (UITabBarController *)rootViewController{
     UITabBarController *vc = (UITabBarController *)[AppStruct window].rootViewController;

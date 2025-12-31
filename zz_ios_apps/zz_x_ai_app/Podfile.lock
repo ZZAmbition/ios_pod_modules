@@ -28,7 +28,8 @@ PODS:
   - Reflow (1.0.0)
   - User (0.1.0):
     - XAIModulesLibs
-  - XAICommon (0.1.0)
+  - XAICommon (0.1.0):
+    - XAIPackagesLibs
   - XAIMediator (0.1.0)
   - XAIModulesLibs (0.1.0):
     - Bifrost
@@ -102,7 +103,7 @@ SPEC CHECKSUMS:
   Mall: 63740110274148568a3e5839d3d170e847b9078e
   Reflow: 95ddcc79c68428fe8a57d12e4e8758f3ff547de6
   User: b05550d96d5a40fe33682148b533bc8469833af1
-  XAICommon: bf0dbcea59e65ce61b44d05d822eae7441cdeca2
+  XAICommon: 7e114931599b6b2e451dbfcd121b34ec55fe3048
   XAIMediator: ef6d46d42d4e72a482ef3c9f9734f7bb43300b1f
   XAIModulesLibs: 36cc644f92e62282a9ea1bba6d7e9e786a4ca4c6
   XAIPackagesLibs: 9472a6231446709193d7143b8e652af61d9c29f5

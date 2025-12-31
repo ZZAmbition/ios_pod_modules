@@ -6,6 +6,10 @@
 //
 
 #import "XAIHomeViewModel.h"
+#import <DataService/DataService.h>
+#import <DataService/HomeModel.h>
+
+
 
 
 @interface XAIHomeViewModel()
@@ -18,19 +22,33 @@
 {
     self = [super init];
     if (self) {
-        [self setupData];
+       
     }
     return self;
 }
 
 
-- (void)setupData {
-    
-    NSMutableArray *list = [NSMutableArray array];
-    for (int i = 0; i < 20; i++) {
-        [list addObject:[NSString stringWithFormat:@"数据项 %d", i + 1]];
-    }
-    self.dataSource = [list copy];
+- (void)getHomeTabsDataWithType:(NSInteger)type{
+    HomeTabRequest *req = [HomeTabRequest new];
+    req.type = type;
+    [XAINetWorkManager sendRequest:req success:^(XAINetWorkResponse *obj) {
+        if ([obj.result isKindOfClass:[NSArray class]]) {
+            NSArray *data = obj.result;
+            NSMutableArray *mutiArray = [NSMutableArray array];
+            for (HomeTabsModel *model in data) {
+                XAIHomeViewListUIModel *uiModel = [XAIHomeViewListUIModel new];
+                uiModel.name = model.name;
+                [mutiArray addObject:uiModel];
+            }
+            if (mutiArray.count > 0 && self.homeViewListDataUpdateBlock) {
+                self.listArray = [mutiArray copy];
+                self.homeViewListDataUpdateBlock();
+            }
+        }
+    } failure:^(XAINetWorkError *error) {
+        
+    }];
 }
+
 
 @end

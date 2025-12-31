@@ -6,10 +6,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XAINetWorkRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeService : NSObject
+
+@end
+
+
+
+@interface HomeTabRequest : XAINetWorkRequest
+
+@property(nonatomic, assign)NSInteger type;
 
 @end
 

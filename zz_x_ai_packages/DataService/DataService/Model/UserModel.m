@@ -18,12 +18,6 @@
 
 @implementation UserInfoModel
 
-+ (NSDictionary *)modelContainerPropertyGenericClass {
-    // value should be Class or Class name.
-    return @{
-        @"address" : [UserGoodsAddressModel class],
-    };
-}
 
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{

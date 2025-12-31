@@ -34,20 +34,22 @@
         NSFontAttributeName: [UIFont systemFontOfSize:18.0 weight:UIFontWeightMedium],
         NSForegroundColorAttributeName: [UIColor yellowColor]
     };
+    
     appearance.stackedLayoutAppearance = itemAppearance;
     appearance.inlineLayoutAppearance = itemAppearance;
     appearance.compactInlineLayoutAppearance = itemAppearance;
-    [[UITabBar appearance] setStandardAppearance:appearance];
+    [UITabBar appearance].standardAppearance = appearance;
     if (@available(iOS 15.0, *)) {
-        [[UITabBar appearance] setScrollEdgeAppearance:appearance];
+        [UITabBar appearance].scrollEdgeAppearance = appearance;
+        [UITabBar appearance].translucent = false;
     }
-    
     
     UINavigationBarAppearance *nvbarAppr = [UINavigationBarAppearance new];
     nvbarAppr.backgroundColor = [UIColor redColor];
     nvbarAppr.backButtonAppearance.normal.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor clearColor]};
     nvbarAppr.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor yellowColor],NSFontAttributeName : [UIFont systemFontOfSize:18]};
     UINavigationBar.appearance.translucent = NO;
+    UINavigationBar.appearance.tintColor = [UIColor whiteColor];
     UINavigationBar.appearance.standardAppearance = nvbarAppr;
     UINavigationBar.appearance.scrollEdgeAppearance = nvbarAppr;
     
@@ -59,6 +61,7 @@
     
     NSArray *vcs = @[self.homeViewController,self.mallViewController, self.communityViewController, self.userViewController];
     [self setViewControllers:vcs];
+    self.tabBar.backgroundColor = [UIColor redColor];
 }
 
 
