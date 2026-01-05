@@ -39,7 +39,7 @@ iOS模块化方案，主要是通过解决多个模块之间的耦合实现，�
 
 **核心：使用命令模式，把每个请求封装成一个独立对象，每个请求的业务逻辑自己处理，实现百分百的自控，而不用每次修改接口都需要去修改网络管理类**。
 
-![网络架构](/Users/zz/Desktop/ios_pod_modules/document/网络架构.png)
+![网络架构](document/网络架构.png)
 
 
 
@@ -61,7 +61,7 @@ iOS模块化方案，主要是通过解决多个模块之间的耦合实现，�
 
 
 
-![mvvm](/Users/zz/Desktop/ios_pod_modules/document/mvvm.png)
+![mvvm](document/mvvm.png)
 
 
 
@@ -83,7 +83,7 @@ iOS模块化方案，主要是通过解决多个模块之间的耦合实现，�
 
 下面是“单向数据流”这一概念的简单图示：
 
-![状态管理](/Users/zz/Desktop/ios_pod_modules/document/状态管理.png)
+![状态管理](document/状态管理.png)
 
 然而，当我们有**多个组件共享一个共同的状态**时，就没有这么简单了：
 
