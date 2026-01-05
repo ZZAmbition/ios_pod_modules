@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  ZZXAIApp
+//  example
 //
-//  Created by zz on 2025/10/17.
+//  Created by zz on 2026/1/4.
 //
 
 #import <UIKit/UIKit.h>

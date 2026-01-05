@@ -10,7 +10,6 @@
 
 @interface UserStateStore ()
 
-@property(nonatomic,strong)UserInfoModel *userInfoModel;
 
 
 @end
@@ -30,9 +29,6 @@
 
 #pragma mark - Getters
 
-- (UserInfoModel *)userInfoModel{
-    return _userInfoModel;
-}
 
 
 #pragma mark - Actions

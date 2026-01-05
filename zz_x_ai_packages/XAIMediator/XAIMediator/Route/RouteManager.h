@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 //login
 + (NSString *)routeLogin;
 
+
++ (NSString *)routeMallDetail;
+
 @end
 
 NS_ASSUME_NONNULL_END

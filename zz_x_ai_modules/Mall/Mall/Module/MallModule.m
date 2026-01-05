@@ -7,6 +7,7 @@
 
 #import "MallModule.h"
 #import "XAIMallViewController.h"
+#import "MallModule+Route.h"
 @implementation MallModule
 
 + (void)load {
@@ -26,6 +27,7 @@
 // 模块启动入口
 - (void)setup {
     NSLog(@"%@ - %@",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+    [[self class] registMallRoute];
 }
 
 

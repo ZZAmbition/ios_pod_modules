@@ -9,14 +9,12 @@
 #import "XAIHomeHeaderView.h"
 #import "XAIHomeSegmentView.h"
 #import <ZZKit/ZZKit.h>
-#import "XAIHomeViewListUIModel.h"
 
 @interface XAIHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 
 @property(nonatomic,strong)XAIHomeViewModel *xaiHomeViewModel;
 @property(nonatomic,strong)UITableView *tableView;
-@property(nonatomic,strong)UIView *tableHeadView;
 
 @property(nonatomic,strong)XAIHomeHeaderView *headerView;
 @property(nonatomic,strong)XAIHomeSegmentView *segmentView;
@@ -117,7 +115,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XAIHomeViewController_Cell" forIndexPath:indexPath];
-    NSString *name = self.xaiHomeViewModel.listArray[indexPath.row].name;
+    XAIHomeViewListUIModel *model = self.xaiHomeViewModel.listArray[indexPath.row];
+    NSString *name = model.name;
     cell.textLabel.text = name;
     cell.detailTextLabel.text = name;
     return cell;

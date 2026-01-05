@@ -6,7 +6,7 @@
 //
 
 #import "RFStore.h"
-#import "UserModel.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,11 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shared;
 
-//getters
-- (UserInfoModel *)userInfoModel;
 
-//actions
-- (void)actionGetUserInfo:(UserInfoModel *)userInfoModel;
 
 @end
 

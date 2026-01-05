@@ -1,15 +1,12 @@
 //
 //  AppDelegate.m
-//  ZZXAIApp
+//  example
 //
-//  Created by zz on 2025/10/17.
+//  Created by zz on 2026/1/4.
 //
 
 #import "AppDelegate.h"
-#import <Bifrost/BifrostHeader.h>
 
-
-#define Safe(obj) obj ? obj : [NSNull null]
 @interface AppDelegate ()
 
 @end
@@ -18,11 +15,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
- 
-    [Bifrost setupAllModules];
-    [Bifrost checkAllModulesWithSelector:_cmd arguments:@[Safe(application), Safe(launchOptions)]];
+    // Override point for customization after application launch.
     return YES;
 }
+
 
 #pragma mark - UISceneSession lifecycle
 
@@ -39,5 +35,6 @@
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
+
 
 @end

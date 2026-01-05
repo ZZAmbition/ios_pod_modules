@@ -14,4 +14,7 @@
     return @"app://login";
 }
 
++ (NSString *)routeMallDetail{
+    return @"app//mall/detail";
+}
 @end
