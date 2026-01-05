@@ -23,19 +23,22 @@ PODS:
     - XAIModulesLibs
   - Mall (0.1.0):
     - XAIModulesLibs
-  - Masonry (1.1.0)
-  - XAICommon (0.1.0)
+  - Reflow (1.0.0)
+  - XAICommon (0.1.0):
+    - XAIPackagesLibs
   - XAIMediator (0.1.0)
   - XAIModulesLibs (0.1.0):
     - Bifrost
     - DataService
-    - Masonry
     - XAICommon
     - XAIMediator
     - ZZKit
   - XAIPackagesLibs (0.1.0):
     - AFNetworking
+    - Reflow
+    - YYModel
     - ZZKit
+  - YYModel (1.0.4)
   - ZZKit (0.1.0)
 
 DEPENDENCIES:
@@ -44,6 +47,7 @@ DEPENDENCIES:
   - DataService (from `../../zz_x_ai_packages/DataService/`)
   - Home (from `../../zz_x_ai_modules/Home/`)
   - Mall (from `../../zz_x_ai_modules/Mall/`)
+  - Reflow (from `../../zz_ios_packages/Reflow/`)
   - XAICommon (from `../../zz_x_ai_packages/XAICommon/`)
   - XAIMediator (from `../../zz_x_ai_packages/XAIMediator/`)
   - XAIModulesLibs (from `../../zz_x_ai_modules/`)
@@ -53,7 +57,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - Masonry
+    - YYModel
 
 EXTERNAL SOURCES:
   Bifrost:
@@ -66,6 +70,8 @@ EXTERNAL SOURCES:
     :path: "../../zz_x_ai_modules/Home/"
   Mall:
     :path: "../../zz_x_ai_modules/Mall/"
+  Reflow:
+    :path: "../../zz_ios_packages/Reflow/"
   XAICommon:
     :path: "../../zz_x_ai_packages/XAICommon/"
   XAIMediator:
@@ -84,13 +90,14 @@ SPEC CHECKSUMS:
   DataService: 6c63aeae6e0894e38c58776d753e5798817c76ce
   Home: 23fb6d7e28c1c0b6230f28f366fd3f396f18d933
   Mall: 63740110274148568a3e5839d3d170e847b9078e
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  XAICommon: bf0dbcea59e65ce61b44d05d822eae7441cdeca2
+  Reflow: 95ddcc79c68428fe8a57d12e4e8758f3ff547de6
+  XAICommon: 7e114931599b6b2e451dbfcd121b34ec55fe3048
   XAIMediator: ef6d46d42d4e72a482ef3c9f9734f7bb43300b1f
-  XAIModulesLibs: ea7927e5987cb7a36dbf3274099def140d3b240f
-  XAIPackagesLibs: 5a192891b732b6aa5bb86104322f58c224afa695
-  ZZKit: 7f31de55167246785d0d014af0335a18fc38c449
+  XAIModulesLibs: 36cc644f92e62282a9ea1bba6d7e9e786a4ca4c6
+  XAIPackagesLibs: 9472a6231446709193d7143b8e652af61d9c29f5
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZZKit: 8a70be25f4ac83f117be558c67a80f1c4d7efb26
 
-PODFILE CHECKSUM: 4bedf68fe1282d4525977bcaa04a94b84a0b9e65
+PODFILE CHECKSUM: 807d28a5b142157939cad4bf72d925b899a6ed23
 
 COCOAPODS: 1.16.2
